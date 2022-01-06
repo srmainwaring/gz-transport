@@ -127,10 +127,10 @@ TEST_P(NetworkClockTest, Functionality)
   EXPECT_EQ(clock.Time(), expectedSecs + expectedNsecs * 2);
 }
 
-INSTANTIATE_TEST_CASE_P(TestAllTimeBases, NetworkClockTest,
-                        ::testing::Values(TimeBase::SIM,
-                                          TimeBase::REAL,
-                                          TimeBase::SYS),); // NOLINT
+// INSTANTIATE_TEST_CASE_P(TestAllTimeBases, NetworkClockTest,
+//                         ::testing::Values(TimeBase::SIM,
+//                                           TimeBase::REAL,
+//                                           TimeBase::SYS),); // NOLINT
 
 /// \brief Check NetworkClock functionality.
 TEST(ClockTest, BadNetworkClock)

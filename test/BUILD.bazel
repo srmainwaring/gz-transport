@@ -35,12 +35,14 @@ cmake_configure_file(
     visibility = ["//visibility:private"],
 )
 
+# TODO(srmainwaring):
+# Disable linkopts on macOS (stdc++fs not required)
 cc_library(
     name = "test_utils",
     srcs = ["ignition/transport/test_config.h"],
     includes = ["."],
     linkopts = [
-        "-lstdc++fs",
+        # "-lstdc++fs",
     ],
     visibility = ["//visibility:public"],
 )
