@@ -114,7 +114,10 @@ cc_library(
 
 cc_binary(
     name = "libignition-transport.so",
-    srcs = ["src/ign.cc"],
+    srcs = [
+      "src/cmd/ign.hh",
+      "src/cmd/ign.cc",
+    ],
     includes = ["include"],
     linkshared = True,
     deps = [":ign_transport"],
