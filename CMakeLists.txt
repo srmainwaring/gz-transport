@@ -108,7 +108,8 @@ if (GZ_TRANSPORT_ENABLE_ZENOH)
   if (NOT zenohc_FOUND AND NOT zenohcxx_FOUND)
     # Set CMAKE_PREFIX_PATH in order to find ROS 2 packages from plain cmake
     # package, see https://github.com/ament/ament_cmake/issues/304
-    set(ros2_zenoh_cmake_path "/opt/ros/$ENV{ROS_DISTRO}/opt/zenoh_cpp_vendor/lib/cmake")
+    # set(ros2_zenoh_cmake_path "/opt/ros/$ENV{ROS_DISTRO}/opt/zenoh_cpp_vendor/lib/cmake")
+    set(ros2_zenoh_cmake_path "/Users/rhys/Code/ros2/jazzy/ros2-jazzy/install/zenoh_cpp_vendor/opt/zenoh_cpp_vendor/lib/cmake")
     if (EXISTS ${ros2_zenoh_cmake_path})
       list(PREPEND CMAKE_PREFIX_PATH ${ros2_zenoh_cmake_path})
       gz_find_package(zenohc PRIVATE QUIET)
